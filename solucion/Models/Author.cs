@@ -27,7 +27,7 @@ namespace solucion.Models
         public string? Nationality { get; set; }
         
         [Required (ErrorMessage = "El Estado es obligatorio.")]
-        public AuthorStatus Status { get; set; }
+        public string? Status { get; set; }
 
         //Relación 1:N
         [JsonIgnore]
@@ -36,9 +36,9 @@ namespace solucion.Models
     }
 
 
-    public enum AuthorStatus
-    {
-        Active,
-        Inactive
-    }
+    // public enum AuthorStatus
+    // {
+    //     Active,
+    //     Inactive
+    // }
 }

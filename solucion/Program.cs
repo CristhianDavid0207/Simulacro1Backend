@@ -17,7 +17,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
 // Add Services MySQL
-builder.Services.AddDbContext<DbContext> (options => 
+builder.Services.AddDbContext<BaseContext> (options => 
     options.UseMySql(
         builder.Configuration.GetConnectionString("MySqlConnection"),
         Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.20-mysql")

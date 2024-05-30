@@ -16,6 +16,12 @@ namespace solucion.Controllers.Authors
         {
             _authorRepository = authorRepository;
         }
+
+        [HttpGet, Route("api/Author")]
+        public IEnumerable<Author> GetGetAuthors(){
+            return _authorRepository.GetAll();
+        }
+
         
     }
 }
