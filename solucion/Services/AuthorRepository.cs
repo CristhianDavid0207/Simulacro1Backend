@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using solucion.Data;
+using solucion.Models;
 
 namespace solucion.Services
 {
@@ -15,5 +16,9 @@ namespace solucion.Services
             _context = context;
         }
 
+        public IEnumerable<Author> GetAll()
+        {
+            return _context.authors.ToList();
+        }
     }
 }
